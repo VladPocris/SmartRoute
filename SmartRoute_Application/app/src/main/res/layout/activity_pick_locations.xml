@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF8F7"
+    android:padding="16dp"
+    tools:context=".PickLocationsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:maxWidth="600dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:contentDescription="@string/to_do"
+            app:srcCompat="@drawable/app_logo" />
+
+        <EditText
+            android:id="@+id/startLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:autofillHints=""
+            android:background="@android:drawable/edit_text"
+            android:focusable="true"
+            android:hint="@string/enter_start_location"
+            android:padding="10dp"
+            tools:ignore="TextFields,VisualLintTextFieldSize" />
+
+        <LinearLayout
+            android:id="@+id/locationContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" />
+
+        <EditText
+            android:id="@+id/endLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:autofillHints=""
+            android:background="@android:drawable/edit_text"
+            android:focusable="false"
+            android:hint="@string/enter_destination"
+            android:padding="10dp"
+            tools:ignore="TextFields,VisualLintTextFieldSize" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/removeButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/danger_color_dark"
+                android:contentDescription="@string/_500_km"
+                app:cornerRadius="12dp"
+                app:icon="@android:drawable/ic_delete"
+                app:iconSize="24dp"
+                app:iconTint="@color/danger_color_light"
+                tools:ignore="VisualLintButtonSize" />
+
+            <Space
+                android:layout_width="275dp"
+                android:layout_height="match_parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addButton"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/success_color_dark"
+                android:contentDescription="@string/to_do"
+                app:cornerRadius="12dp"
+                app:icon="@android:drawable/ic_input_add"
+                app:iconSize="24dp"
+                app:iconTint="@android:color/holo_green_light"
+                tools:ignore="DuplicateSpeakableTextCheck,VisualLintButtonSize" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOptimize"
+            android:layout_width="176dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#045e09"
+            android:text="@string/smart_route"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="30dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPlanAnotherTrip"
+            android:layout_width="176dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:backgroundTint="#045e09"
+            android:text="@string/plan_another_trip"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:cornerRadius="30dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/or"
+            android:textAlignment="center"
+            android:textColor="#0B0B0B"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:id="@+id/codeQuery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="16dp">
+
+            <EditText
+                android:id="@+id/startLocation2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:background="@android:drawable/edit_text"
+                android:hint="@string/code_placeholder"
+                android:padding="10dp"
+                tools:ignore="TextFields,VisualLintTextFieldSize" />
+
+            <Button
+                android:id="@+id/btnRetrieveTrip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/logo_color"
+                android:text="@string/trip_retrieve"
+                android:textColor="#000000"
+                app:cornerRadius="30dp"
+                tools:ignore="TouchTargetSizeCheck,VisualLintButtonSize" />
+        </LinearLayout>
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/_35_h" />
+
+    </LinearLayout>
+</ScrollView>

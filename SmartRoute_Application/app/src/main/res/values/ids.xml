@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="mapView" type="id" />
+    <item name="startLocation" type="id" />
+    <item name="endLocation" type="id" />
+    <item name="locationContainer" type="id" />
+    <item name="btnAddLocation" type="id" />
+    <item name="btnOptimize" type="id" />
+</resources>
