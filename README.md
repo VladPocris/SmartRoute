@@ -1,3 +1,21 @@
+## SmartRoute – Plan • Explore • Arrive Safely
+
+SmartRoute pairs an Android‑Studio **Java** app with a lightweight **ASP.NET Core** back‑end and **Azure SQL** storage.  
+Enter any sequence of places, get an optimised Google‑Directions route, and share it with a six‑digit code.
+
+* **Mobile Front‑End** – Java 17 · Google Maps SDK overlays · Google Places autocomplete · offline cache  
+* **Back‑End** – ASP.NET Core Web API · Azure SQL Database · hosted on Azure App Service  
+* **APIs** – Google Directions (routing) · Google Places (search)  
+* **CI/CD** – GitHub Actions builds APK, runs tests, applies DB migrations, and redeploys API  
+
+<p align="center">
+  <img src="docs/screenshots/home_screen.png" width="200"/>
+  <img src="docs/screenshots/plan_trip.png"  width="200"/>
+  <img src="docs/screenshots/route_steps.png" width="200"/>
+</p>
+
+Jump to [API endpoints](#endpoints) for request examples.
+
 # SmartRoute API Service
 
 ## Overview
