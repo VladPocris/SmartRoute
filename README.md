@@ -6,7 +6,6 @@ Enter any sequence of places, get an optimised Google‑Directions route, and sh
 * **Mobile Front‑End** – Java 17 · Google Maps SDK overlays · Google Places autocomplete · offline cache  
 * **Back‑End** – ASP.NET Core Web API · Azure SQL Database · hosted on Azure App Service  
 * **APIs** – Google Directions (routing) · Google Places (search)  
-* **CI/CD** – GitHub Actions builds APK, runs tests, applies DB migrations, and redeploys API  
 
 Jump to [API endpoints](#endpoints) for request examples.
 
