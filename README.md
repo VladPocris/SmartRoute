@@ -8,12 +8,6 @@ Enter any sequence of places, get an optimised Google‑Directions route, and sh
 * **APIs** – Google Directions (routing) · Google Places (search)  
 * **CI/CD** – GitHub Actions builds APK, runs tests, applies DB migrations, and redeploys API  
 
-<p align="center">
-  <img src="docs/screenshots/home_screen.png" width="200"/>
-  <img src="docs/screenshots/plan_trip.png"  width="200"/>
-  <img src="docs/screenshots/route_steps.png" width="200"/>
-</p>
-
 Jump to [API endpoints](#endpoints) for request examples.
 
 # SmartRoute API Service
