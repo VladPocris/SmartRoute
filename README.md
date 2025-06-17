@@ -13,11 +13,160 @@ Jump to [API endpoints](#endpoints) for request examples.
 
 ## Overview
 
-This API provides endpoints to create, retrieve, update, and delete trips and their respective route steps using data from the Google Directions API. Deployed on Azure.
+This API provides endpoints to create, retrieve, update, and delete trips and their respective route steps using data from the Google Directions API. Deployed on Azure. (NO LONGER ACTUAL)
+Application migrated to Supabase for free database and render.com for free web service hosting.
 
 ---
 
 ## Base URL
+
+```
+https://smartroute-i92g.onrender.com/
+```
+
+---
+
+## Endpoints
+
+### 1. Get all trips
+
+**Request**
+
+```
+GET /api/trips
+```
+
+**Sample**
+
+```bash
+curl https://smartroute-i92g.onrender.com/api/trips
+```
+
+---
+
+### 2. Get trip by code
+
+**Request**
+
+```
+GET /api/trips/code/{code}
+```
+
+**Example**
+
+```bash
+curl https://smartroute-i92g.onrender.com/api/trips/code/327926
+```
+
+---
+
+### 3. Create a trip
+
+**Request**
+
+```
+POST /api/trips
+Content-Type: application/json
+```
+
+**Body**
+
+```json
+{
+  "locations": ["Rome, Italy", "Paris, France", "Moscow, Russia"],
+  "name": "European Tour"
+}
+```
+
+**Example**
+
+```bash
+curl -X POST https://smartroute-i92g.onrender.com/api/trips \
+     -H "Content-Type: application/json" \
+     -d '{ "locations": ["Rome, Italy", "Paris, France"], "name": "Weekend Getaway" }'
+```
+
+---
+
+### 4. Update a trip
+
+**Request**
+
+```
+PUT /api/trips/code/{code}
+Content-Type: application/json
+```
+
+**Body**
+
+```json
+{
+  "locations": ["London, UK", "Edinburgh, UK"],
+  "name": "UK Highlands"
+}
+```
+
+**Example**
+
+```bash
+curl -X PUT https://smartroute-i92g.onrender.com/api/trips/code/327926 \
+     -H "Content-Type: application/json" \
+     -d '{ "locations": ["London, UK", "Edinburgh, UK"], "name": "UK Highlands" }'
+```
+
+---
+
+### 5. Delete a trip
+
+**Request**
+
+```
+DELETE /api/trips/code/{code}
+```
+
+**Example**
+
+```bash
+curl -X DELETE https://smartroute-i92g.onrender.com/api/trips/code/327926
+```
+
+> If deleted, example requests to this trip code will no longer work.
+
+---
+
+### 6. Get all trip steps
+
+**Request**
+
+```
+GET /api/tripsteps
+```
+
+**Example**
+
+```bash
+curl https://smartroute-i92g.onrender.com/api/tripsteps
+```
+
+---
+
+### 7. Get trip steps by code
+
+**Request**
+
+```
+GET /api/tripsteps/code/{code}
+```
+
+**Example**
+
+```bash
+curl https://smartroute-i92g.onrender.com/api/tripsteps/code/327926
+```
+
+---
+
+## Base URL (OLD AZURE VERSION)
 
 ```
 https://smartrouteapiservice.azurewebsites.net/
