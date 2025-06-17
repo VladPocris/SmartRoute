@@ -5,8 +5,11 @@ using TripsApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//Azure SQL-DB implementation
+//builder.Services.AddDbContext<TripsContext>(opts =>
+//    opts.UseSqlServer(builder.Configuration.GetConnectionString("TripsContext")));
 builder.Services.AddDbContext<TripsContext>(opts =>
-    opts.UseSqlServer(builder.Configuration.GetConnectionString("TripsContext")));
+    opts.UseNpgsql(builder.Configuration.GetConnectionString("TripsContext")));
 
 builder.Services.AddHttpClient<IRoutesClient, RoutesClient>();
 
