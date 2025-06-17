@@ -80,7 +80,8 @@ public class PickLocationsActivity extends AppCompatActivity implements OnMapRea
                 .addInterceptor(log)
                 .build();
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://smartrouteapiservice.azurewebsites.net/")
+                //.baseUrl("https://smartrouteapiservice.azurewebsites.net/")
+                .baseUrl("https://smartroute-i92g.onrender.com/")
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();

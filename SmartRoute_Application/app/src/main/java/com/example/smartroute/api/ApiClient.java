@@ -9,7 +9,9 @@ public class ApiClient {
     public static SmartRouteApi get() {
         if (INSTANCE == null) {
             Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl("https://smartrouteapiservice.azurewebsites.net/")
+                    //Previous Azure Implementation
+                    //.baseUrl("https://smartrouteapiservice.azurewebsites.net/")
+                    .baseUrl("https://smartroute-i92g.onrender.com/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
             INSTANCE = retrofit.create(SmartRouteApi.class);
