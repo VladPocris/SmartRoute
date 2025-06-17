@@ -18,7 +18,7 @@ Application migrated to Supabase for free database and render.com for free web s
 
 ---
 
-## Base URL
+## Base URL (FIRST REQUESTS TAKE UP TO 50 SECONDS BECAUSE OF Render.com FREE HOSTING PLAN, THEN IT WORKS AS INTENDED)
 
 ```
 https://smartroute-i92g.onrender.com/
